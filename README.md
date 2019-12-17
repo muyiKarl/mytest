@@ -80,10 +80,10 @@ git checkout master || git switch master<br>
   恢复的时候，先用git stash list查看<br>
   使用git stash apply stash@{0}恢复指定的stash
 #
-### git cherry-pick <commit>
+### git cherry-pick \<commit\>
   复制一个特定的提交到当前分支
 #
-## git branch -D <name>
+## git branch -D \<name\>
   丢弃一个没有被合并过的分支，可以通过此命令强行删除
 
 
