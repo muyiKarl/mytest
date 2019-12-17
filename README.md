@@ -22,7 +22,7 @@
     HEAD~100 往上100个版本
     git reset命令既可以回退版本，也可以把暂存区的修改回退到工作区。当我们用HEAD 时，表示最新的版本。
 #
-## git reset --hard <commit id>
+## git reset --hard \<commit id\>
 指定回到未来的某个版本(git log 或者 git reflog 的时候，可以查看到id)
 #
 ## cat name 
