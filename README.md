@@ -66,21 +66,21 @@ git checkout master || git switch master<br>
 删除dev分支
 #
 ## 工作现场
-### git stash
+#### git stash
 可以把当前工作现场“储藏”起来，等以后恢复现场后继续工作
 #
-### git stash list
+#### git stash list
 查看工作现场
 #
-### 恢复工作现场，有两个办法
+#### 恢复工作现场，有两个办法
   用git stash apply恢复，但是恢复后，stash内容并不删除，你需要用git stash drop来删除<br>
   用git stash pop，恢复的同时把stash内容也删了
 #
-### 多次stash
+#### 多次stash
   恢复的时候，先用git stash list查看<br>
   使用git stash apply stash@{0}恢复指定的stash
 #
-### git cherry-pick \<commit\>
+#### git cherry-pick \<commit\>
   复制一个特定的提交到当前分支
 #
 ## git branch -D \<name\>
@@ -96,9 +96,32 @@ git checkout master || git switch master<br>
 ## git branch --set-upstream-to=origin/dev dev
 git pull也失败了，原因是没有指定本地dev分支与远程origin/dev分支的链接，根据提示，设置dev和origin/dev的链接<br>
 然后，再`git pull`
-
-
-
+#
+## 标签管理
+#### 创建标签
+    git tag \<name\>
+      git tag v1.0 创建一个叫’v1.0‘的标签
+    git tag
+      查看所有标签
+    git tag v0.9 \<commit id\>
+      给对应的commit id创建标签
+    git show \<tagname\>
+      查看标签信息
+    git tag -a \<tagname\> -m \<message\>
+      tagname: 标签名称
+      message：对于这个标签的描述
+#### 操作标签
+    git tag -d \<tagname\>
+      删除标签
+    git push origin <tagname>
+      推送一个本地标签到远程
+    git push origin --tags
+      推送全部未推送过的本地标签
+###### 删除远程标签
+      先删除本地的
+        git tag -d \<tagname\>
+      在从远程删除
+        git push origin :refs/tags/<tagname>
 
 
 
