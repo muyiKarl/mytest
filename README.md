@@ -59,7 +59,7 @@ git checkout master || git switch master<br>
 #
 ## git merge dev
 此命令用于合并指定分支到当前分支
-  dev指定分支
+  dev指定分支<br>
   当前分支使用`git branch`查看
 #
 ## git branch -d dev
@@ -71,6 +71,20 @@ git checkout master || git switch master<br>
 #
 ### git stash list
 查看工作现场
+#
+### 恢复工作现场，有两个办法
+  用git stash apply恢复，但是恢复后，stash内容并不删除，你需要用git stash drop来删除<br>
+  用git stash pop，恢复的同时把stash内容也删了
+#
+### 多次stash
+  恢复的时候，先用git stash list查看<br>
+  使用git stash apply stash@{0}恢复指定的stash
+#
+### git cherry-pick <commit>
+  复制一个特定的提交到当前分支
+#
+## git branch -D <name>
+  丢弃一个没有被合并过的分支，可以通过此命令强行删除
 
 
 
