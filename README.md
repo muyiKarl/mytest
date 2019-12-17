@@ -63,7 +63,14 @@ git checkout master || git switch master<br>
   当前分支使用`git branch`查看
 #
 ## git branch -d dev
-
+删除dev分支
+#
+## 工作现场
+### git stash
+可以把当前工作现场“储藏”起来，等以后恢复现场后继续工作
+#
+### git stash list
+查看工作现场
 
 
 
