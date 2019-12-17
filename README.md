@@ -85,11 +85,17 @@ git checkout master || git switch master<br>
 #
 ## git branch -D \<name\>
   丢弃一个没有被合并过的分支，可以通过此命令强行删除
-
-
-
-
-
+#
+## git push origin master
+推送分支，就是把该分支上的所有本地提交推送到远程库。推送时，要指定本地分支，这样，Git就会把该分支推送到远程库对应的远程分支上<br>
+如果要推送其他分支，比如dev，就改成：git push origin dev
+#
+## git checkout -b dev origin/dev
+从远程仓库 把dev分支 创建到本地
+#
+## git branch --set-upstream-to=origin/dev dev
+git pull也失败了，原因是没有指定本地dev分支与远程origin/dev分支的链接，根据提示，设置dev和origin/dev的链接<br>
+然后，再`git pull`
 
 
 
