@@ -59,11 +59,10 @@ git checkout master || git switch master<br>
 #
 ## git merge dev
 此命令用于合并指定分支到当前分支
+  dev指定分支
+  当前分支使用`git branch`查看
 #
 ## git branch -d dev
-删除dev分支
-
-
 
 
 
