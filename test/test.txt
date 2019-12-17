@@ -14,4 +14,8 @@ i have a pen
 
 i have a apple
 
+<<<<<<< HEAD
 i have a 77777
+=======
+i have a banana
+>>>>>>> dev1
